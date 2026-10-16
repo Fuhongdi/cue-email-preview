@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email templates</title>
+<style>
+  :root { --ink:#14252b; --muted:#647278; --line:#dce0e9; --navy:#263158; --rose:#9b5264; --canvas:#f4f5f8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--canvas); color:var(--ink); font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; }
+  .wrap { max-width:1240px; margin:0 auto; padding:64px 32px 96px; }
+  .kicker { margin:0 0 10px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--rose); }
+  h1 { margin:0 0 48px; font:normal 36px/1.2 Georgia,"Times New Roman",serif; color:#18213f; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(340px, 1fr)); gap:32px; }
+  a.card { display:block; background:#fff; color:inherit; text-decoration:none; box-shadow:0 1px 2px rgba(20,37,43,.05), 0 12px 32px rgba(38,49,88,.07); transition:transform .2s, box-shadow .2s; }
+  a.card:hover { transform:translateY(-2px); box-shadow:0 1px 2px rgba(20,37,43,.05), 0 18px 44px rgba(38,49,88,.12); }
+  .thumb { height:340px; overflow:hidden; border-bottom:1px solid var(--line); background:var(--canvas); }
+  .thumb iframe { width:680px; height:1360px; border:0; transform:scale(.5); transform-origin:0 0; pointer-events:none; }
+  .body { padding:20px 24px 24px; }
+  .body h2 { margin:0 0 6px; font:normal 20px/1.3 Georgia,"Times New Roman",serif; }
+  .body p { margin:0; font-size:13px; color:var(--muted); }
+  .body .open { margin-top:14px; font-size:13px; font-weight:600; color:var(--navy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="kicker">Applied Energy</p>
+  <h1>Email templates</h1>
+  <div class="grid">
+    
+    <a class="card" href="cue2026-cfp/index.html">
+      <div class="thumb"><iframe src="cue2026-cfp/sample.html" tabindex="-1" loading="lazy" title="CUE 2026 Call for Papers"></iframe></div>
+      <div class="body">
+        <h2>CUE 2026 Call for Papers</h2>
+        <p>Call for Papers | CUE 2026 – Low-Carbon Cities and Urban Energy Systems</p>
+        <p class="open">Open preview &rarr;</p>
+      </div>
+    </a>
+    
+  </div>
+</div>
+</body>
+</html>
