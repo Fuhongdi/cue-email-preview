@@ -24,7 +24,7 @@
   dd { margin:0; font-size:14px; word-break:break-word; }
   .group { margin:0 0 20px; }
   .group p { margin:0 0 8px; font-size:12px; color:var(--muted); }
-  .seg { display:inline-flex; background:#fff; border:1px solid var(--line); border-radius:7px; padding:3px; }
+  .seg { display:inline-flex; flex-wrap:wrap; background:#fff; border:1px solid var(--line); border-radius:7px; padding:3px; }
   .seg button { border:0; background:none; font:inherit; font-size:13px; color:var(--muted); padding:6px 12px; border-radius:5px; cursor:pointer; }
   .seg button.on { background:var(--navy); color:#fff; }
   table.vars { width:100%; border-collapse:collapse; font-size:13px; margin:0 0 24px; }
@@ -46,7 +46,7 @@
   <aside>
     <p class="kicker">Email template</p>
     <h1>CUE 2026 Call for Papers</h1>
-    <p class="desc">Invitation to past CUE participants to submit an abstract to CUE2026.</p>
+    <p class="desc">Invitation to past ICAE series participants and other energy researchers to submit an abstract to CUE 2026.</p>
 
     <dl>
       <div><dt>From</dt><dd>CUE 2026 Organizing Committee &lt;cue2026@applied-energy.org&gt;</dd></div>
@@ -61,17 +61,17 @@
     </div>
     <div class="group">
       <p>Recipient</p>
-      <div class="seg"><button class="on" data-variant="sample">Sample</button><button data-variant="fallback">No data</button><button data-variant="variables">Variables</button></div>
+      <div class="seg"><button class="on" data-variant="options">All options</button><button data-variant="participant">Past participant</button><button data-variant="researcher">Energy researcher</button><button data-variant="noname">No name</button></div>
     </div>
 
     <table class="vars">
-      <tr><td><code>email</code></td><td>Recipient address (required)</td></tr><tr><td><code>title</code></td><td>Prof., Dr., Ms. … — used with last_name in the salutation</td></tr><tr><td><code>last_name</code></td><td>Salutation becomes “Dear Prof. Rossi,”; empty keeps the Word original “Dear Colleagues,”</td></tr><tr><td><code>past_edition</code></td><td>e.g. CUE 2025 → “As a past participant of CUE 2025”; empty keeps the Word original “of the CUE symposium series”</td></tr>
+      <tr><td><code>email</code></td><td>Recipient address (required)</td></tr><tr><td><code>honorific</code></td><td>Prof. / Dr. / Mr. / Ms.</td></tr><tr><td><code>last_name</code></td><td>Surname only, e.g. Zhang → “Dear Prof. Zhang,”. If honorific or last_name is empty → “Dear Colleagues,”</td></tr><tr><td><code>audience</code></td><td>participant = past ICAE series participant · researcher or empty = other energy researchers</td></tr>
     </table>
 
     <p class="links"><a href="plain.txt">Plain-text version</a> &nbsp;·&nbsp; Source: <code>templates/cue2026-cfp/</code></p>
   </aside>
 
-  <main class="stage"><div class="device"><iframe src="sample.html" title="Email preview"></iframe></div></main>
+  <main class="stage"><div class="device"><iframe src="options.html" title="Email preview"></iframe></div></main>
 </div>
 
 <script>
